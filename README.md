@@ -9,7 +9,7 @@ Holds a influx "schema" and writes "natural" random data to influx
 ## Steps to run:
 ### ./config.py !
 - Influx-DB host, user, password, ...
-- test database name!
+- Test database name: Default testData, will be created if not exists. If allready exists, may lead to unexpected results.
 - test time data: Currently -100 -> +30 days
 ### Run Script:
 - python ./campaignion_testData_influx.script.py
