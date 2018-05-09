@@ -19,16 +19,14 @@ def write_test_data(schema: dict, host=u'localhost', port=8086, username=u'admin
         database.switch_database(database_name)
     writer = influxdbTestData(schema, database, start_time, end_time, freq)
     datapoints = writer.timerange.shape[0]
-    time_to_say_hello = datapoints//10
-    count = 0
-    printed = 0
     t = time.perf_counter()
+    i = 0
     for write in writer:
-        count += 1
-        if count%time_to_say_hello is 0:
+        i += 1
+        if i%10 is 0:
             passed_time = time.perf_counter() - t
             t = time.perf_counter()
-            printed += 1
-            yield "Row {count} ({percent:.2f}%)\t\tTime: {time:.1f} s".format(count=str(count), percent=count*100/datapoints, time=passed_time) + ' . ' * printed + '   ' * (10-printed) + '|'
+            row = write._row
+            yield "Row {row} ({percent:.2f}%)\t\tTime: {time:.1f} s".format(row=str(row), percent=row*100/datapoints, time=passed_time) + ' . ' * i
     
     
