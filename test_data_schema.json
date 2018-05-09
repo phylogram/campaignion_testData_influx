@@ -1,0 +1,100 @@
+{
+  "measurements": [
+    {"measurement": "Supporters",
+    "tags": {
+      "Engagement": {
+        "values": [
+          "New",
+          "Active",
+          "Very Active",
+          "Inactive"
+        ]
+      }
+    },
+    "fields": {
+      "Supporters": {
+        "type": "int"
+      },
+      "Supporters_p": {
+        "type": "float",
+        "random_arguments": {
+          "upper_limit": 100
+        }
+      },
+      "OptIn": {
+        "type": "float",
+        "random_arguments": {
+          "upper_limit": 100
+        }
+      }
+    }
+    },
+    {
+      "measurement": "form_submissions",
+      "tags": {
+        "Action": {
+            "values": [
+          "Rettet die Bienen",
+          "Freiheit für Karlheinz"
+            ],
+            "grouped": "Type"
+        },
+        "Type": {
+          "values": [
+              "Petition",
+              "Email to target"
+          ]  
+        },
+        "Source": {
+            "values": [
+          "Facebook",
+          "Organic",
+          "Website"
+            ]
+        }
+      },
+      "fields": {
+        "Actions taken": {
+          "type": "int"
+        },
+        "OptInRate": {
+          "type": "float",
+          "random_arguments": {
+            "upper_limit": 100.0
+          }
+        },
+        "New": {
+          "type": "int"
+        }
+      }
+    },
+    {
+      "measurement": "Donations",
+      "tags": {
+        "Donation": {
+          "values": [
+            "Ein Heim für verarmte Millionäre",
+            "Ein Flughafen für Döbling",
+            "Trachten statt Drogen"
+          ]
+        },
+        "Source": {
+          "values": [
+            "Facebook",
+            "Organic",
+            "Website"
+          ]
+        }
+      },
+      "fields": {
+        "Donations taken": {
+          "type": "int"
+        },
+        "Donations in €": {
+          "type": "float"
+        }
+      }
+    }
+  ]
+
+}
