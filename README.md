@@ -2,7 +2,7 @@
 Holds a influx "schema" and writes "natural" random data to influx
 
 ## Requirements:
-- python:
+- python 3:
   - pandas
   - influxdb
 - Influx (https://docs.influxdata.com/influxdb/v1.5/introduction/installation/)
