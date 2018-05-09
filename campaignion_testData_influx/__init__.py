@@ -26,7 +26,6 @@ def write_test_data(schema: dict, host=u'localhost', port=8086, username=u'admin
         if i%10 is 0:
             passed_time = time.perf_counter() - t
             t = time.perf_counter()
-            row = write._row
-            yield "Row {row} ({percent:.2f}%)\t\tTime: {time:.1f} s".format(row=str(row), percent=row*100/datapoints, time=passed_time) + ' . ' * i
-    
-    
+            row = writer.row
+            percent = row*100/datapoints
+            yield "Row {row} ({percent:.2f}%)\tTime: {time:.1f} s".format(row=str(row), percent=percent, time=passed_time) + ' .' * int(percent/10)
