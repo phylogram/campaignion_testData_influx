@@ -31,7 +31,7 @@ class influxdbTestData(object):
         self._addTimeRange(start, end, freq)
         self.schema = schema
         self._createIteratorDicts()
-        self._row = 0
+        self.row = 0
         
     def __iter__(self):
         return self
@@ -102,8 +102,8 @@ class influxdbTestData(object):
     def _createNextData(self):
         
         testData = list()
-        self._row += 1
-        while (self._row % self.rows_in_a_push is not 0):            
+        self.row += 1
+        while (self.row % self.rows_in_a_push is not 0):            
             time = next(self.timerange_iterator)
             time = str(time.asm8)
             for iterator_dict in self.IteratorDicts:
@@ -127,7 +127,7 @@ class influxdbTestData(object):
                         
                     testData_n['time'] = time
                     testData.append(testData_n)
-            self._row += 1
+            self.row += 1
             
         return testData
         
