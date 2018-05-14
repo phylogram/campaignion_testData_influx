@@ -16,7 +16,7 @@ Holds a influx "schema" and writes "natural" random data to influx
 - python3 ./campaignion_testData_influx.script.py
 ### Grafana Dashboard:
 - Set Influx & test database name as default data source!
-- Copy or upload Grafana_Main_Dashboard.json to Grafana
+- Copy or upload Dashboards from ./grafana_dashboards/ to grafana
 ## More
 ### Influx "Schema":
 At ./test_data_schema.json
