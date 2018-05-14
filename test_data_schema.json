@@ -84,6 +84,12 @@
             "Organic",
             "Website"
           ]
+        },
+        "Commitment": {
+          "values": [
+            "Regular:",
+            "One-Off"
+          ]
         }
       },
       "fields": {
