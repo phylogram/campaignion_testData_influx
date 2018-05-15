@@ -12,7 +12,6 @@ Holds a influx "schema" and writes "natural" random data to influx
 - Test database name: Default testData, will be created if not exists. If allready exists, may lead to unexpected results.
 - test time data: Currently -100 -> +30 days
 ### Run Script:
-- cd into campaignion_testData_influx
 - python3 ./campaignion_testData_influx.script.py
 ### Grafana Dashboard:
 - Set Influx & test database name as default data source!
