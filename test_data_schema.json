@@ -87,7 +87,7 @@
         },
         "Commitment": {
           "values": [
-            "Regular:",
+            "Regular",
             "One-Off"
           ]
         }
