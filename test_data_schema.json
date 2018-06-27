@@ -65,6 +65,12 @@
         },
         "New": {
           "type": "int"
+        },
+        "New_p": {
+           "type": "float",
+           "random_argument": {
+              "upper_limit": 100.0
+           }
         }
       }
     },
