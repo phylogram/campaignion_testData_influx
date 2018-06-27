@@ -33,3 +33,27 @@ coverage.xml
 
 # Translations
 *.mo
+
+======================= Manually added =======================
+
+# Spyder Project
+.spyproject*
+
+# Virtual environment
+env/*
+
+# PyTest Cache
+.pytest_cache*
+
+# Workbench bak
+*.mwb.bak
+
+# jupyter_notebook
+.ipynb*
+
+# migrations and sqlite3 db
+migrations/**
+*.db
+
+# jetbrains
+.idea*
